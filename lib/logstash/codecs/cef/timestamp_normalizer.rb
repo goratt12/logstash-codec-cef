@@ -35,7 +35,7 @@ class LogStash::Codecs::CEF::TimestampNormalizer
                                        .withLocale(java_locale)
   end
 
-  INTEGER_OR_DECIMAL_PATTERN = /\A[1-9][0-9]*(?:\.[0-9]+)?\z/
+  INTEGER_OR_DECIMAL_PATTERN = /\A-?(?:0|[1-9][0-9]*)(?:\.[0-9]+)?\z/
   private_constant :INTEGER_OR_DECIMAL_PATTERN
 
   # @param value [String, Time, Numeric]
